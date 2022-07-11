@@ -14,7 +14,7 @@ provider "kubernetes" {
   cluster_ca_certificate = base64decode(var.kubeclustercert)
   }
 
-resource "kubernetes_deployment" "python-docker-deployment" {
+resource "kubernetes_manifest" "python-docker-deployment" {
 
   manifest = {
     "apiVersion" = "apps/v1"
