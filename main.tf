@@ -44,12 +44,6 @@ resource "kubernetes_manifest" "python-docker-deployment" {
             {
               "image" = "rainap/python-docker"
               "name"  = "sample-app"
-              "ports" = [
-                {
-                  "containerPort" = 80
-                  "protocol"      = "TCP"
-                },
-              ]
             },
           ]
         }
